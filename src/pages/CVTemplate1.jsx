@@ -1,9 +1,14 @@
 import React from 'react'
+import CVForm from '../components/CVForm'
+import CVPreview from '../components/CVPreview'
 
 const CVTemplate1 = () => {
   return (
-    <div>CVTemplate1</div>
+    <>
+      <CVForm />
+      <CVPreview />
+    </>
   )
 }
 
-export default CVTemplate1
+export default CVTemplate1;
