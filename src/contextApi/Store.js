@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import CVEmpty from "../utils/CVEmpty";
 import CVDummy from "../utils/CVDummy";
@@ -30,8 +31,15 @@ export const useCVDispatch = () => {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case '':
-
+    case 'CHANGE_GENERAL_INFO': {
+      return {
+        ...state,
+        generalInfo: {
+          ...state.generalInfo,
+          [action.name]: action.value,
+        }
+      };
+    }
 
     default:
       return state;

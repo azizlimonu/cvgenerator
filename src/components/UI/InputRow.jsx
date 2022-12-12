@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const InputRow = () => {
+const InputRow = ({ children }) => {
   return (
-    <div>InputRow</div>
+    <div className='flex items-center gap-[12px]'>
+      {children}
+    </div>
   )
 }
 
