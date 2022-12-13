@@ -47,16 +47,15 @@
   transition: 0.3s ease-in-out;
 }
 
-.input-field:not(:placeholder-shown) + .input-label,
-.input-field:placeholder-shown + .input-label {
+.input-field:not(:placeholder-shown)+.input-label,
+.input-field:placeholder-shown+.input-label {
   visibility: hidden;
   z-index: -1;
 }
 
-.input-field:focus:not(:placeholder-shown) + .input-label {
+.input-field:focus:not(:placeholder-shown)+.input-label {
   visibility: visible;
   z-index: 1;
   opacity: 1;
-  transform: translate3d(0, calc((50%) - (0.8rem * 0.8) - (2.1rem * 1.8)), 0)
-    scale(0.8);
+  transform: translate3d(0, calc((50%) - (0.8rem * 0.8) - (2.1rem * 1.8)), 0) scale(0.8);
 }

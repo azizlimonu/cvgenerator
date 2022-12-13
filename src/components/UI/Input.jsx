@@ -20,7 +20,7 @@ const Input = ({
         />
         <label
           htmlFor={name}
-          className='text-[1.4rem] block absolute bottom-[-25%] input-label'
+          className={style['input-label']}
         >
           {label}
         </label>
