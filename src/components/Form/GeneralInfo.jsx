@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { useCV, useCVDispatch } from '../../contextApi/Store'
 import HeaderSection from './HeaderSection'
 import Input from '../UI/Input'

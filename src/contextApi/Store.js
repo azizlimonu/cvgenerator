@@ -29,15 +29,42 @@ export function useCVDispatch() {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'CHANGE_GENERAL_INFO': {
+    case 'CHANGE_GENERAL_INFO':
       return {
         ...state,
         generalInfo: {
           ...state.generalInfo,
           [action.name]: action.value,
         }
-      };
-    }
+      }
+
+    case 'ADD_EDUCATION':
+      return {
+        ...state,
+        education: [
+          {
+            id: uuidv4(),
+            universityName: '',
+            city: '',
+            degree: '',
+            subject: '',
+            from: '',
+            to: '',
+          },
+          ...state.education
+        ]
+      }
+
+    case 'DELETE_EDUCATION':
+      return {
+
+      }
+
+    case 'CHANGE_EDUCATION':
+      return {
+
+      }
+
 
     default:
       return state;
