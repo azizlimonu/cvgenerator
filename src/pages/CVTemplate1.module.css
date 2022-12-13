@@ -1,0 +1,16 @@
+.contain {
+  display: flex;
+  margin: 3rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .contain {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .contain {
+    margin: 1.6rem;
+  }
+}

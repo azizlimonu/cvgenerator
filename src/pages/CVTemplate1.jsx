@@ -1,12 +1,13 @@
 import React from 'react'
 import CVForm from '../components/CVForm'
 import CVPreview from '../components/CVPreview'
+import style from './CVTemplate1.module.css'
 
 const CVTemplate1 = () => {
   return (
-    <div className='flex m-11 flex-row' >
+    <div className={style.contain} >
       <CVForm />
-      <CVPreview/>
+      <CVPreview />
     </div>
   )
 }
