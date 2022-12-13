@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
-import { useCV, useCVDispatch } from '../contextApi/Store'
-import Input from './UI/Input'
-import InputRow from './UI/InputRow'
-import InputWrapper from './UI/InputWrapper'
-import TextArea from './UI/TextArea'
-import Wrapper from './UI/Wrapper'
+import React, { useContext, useState } from 'react'
+import { useCV, useCVDispatch } from '../../contextApi/Store'
+import HeaderSection from './HeaderSection'
+import Input from '../UI/Input'
+import InputRow from '../UI/InputRow'
+import InputWrapper from '../UI/InputWrapper'
+import TextArea from '../UI/TextArea'
+import Wrapper from '../UI/Wrapper'
 
 const GeneralInfo = () => {
   const [isShown, setIsShown] = useState(true);
   const { generalInfo } = useCV();
   const dispatch = useCVDispatch();
 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-
+    // console.log(name, value);
     dispatch({
       type: 'CHANGE_GENERAL_INFO',
       name,
@@ -27,6 +29,11 @@ const GeneralInfo = () => {
 
   return (
     <div>
+      <HeaderSection
+        text='Personal Information'
+        onToggleSection={handleToggle}
+        isShown={isShown}
+      />
       {isShown && (
         <Wrapper>
           <InputWrapper>

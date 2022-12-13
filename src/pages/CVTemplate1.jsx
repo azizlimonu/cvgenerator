@@ -4,10 +4,10 @@ import CVPreview from '../components/CVPreview'
 
 const CVTemplate1 = () => {
   return (
-    <>
+    <div className='flex m-11 flex-row' >
       <CVForm />
-      <CVPreview />
-    </>
+      <CVPreview/>
+    </div>
   )
 }
 

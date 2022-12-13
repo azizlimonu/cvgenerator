@@ -1,5 +1,5 @@
 import React from 'react'
-import GeneralInfo from './GeneralInfo'
+import GeneralInfo from './CV/GeneralInfo'
 
 const CVForm = () => {
   return (

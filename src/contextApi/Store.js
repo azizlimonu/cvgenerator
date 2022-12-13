@@ -4,13 +4,11 @@ import { v4 as uuidv4 } from 'uuid';
 import CVEmpty from "../utils/CVEmpty";
 import CVDummy from "../utils/CVDummy";
 
-const CVContext = createContext();
-const CVDispatchContext = createContext();
-
-const initialState = CVDummy;
+export const CVContext = createContext();
+export const CVDispatchContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, CVDummy)
 
   return (
     <CVContext.Provider value={state}>
@@ -21,13 +19,13 @@ export const StoreProvider = ({ children }) => {
   )
 };
 
-export const useCV = () => {
+export function useCV() {
   return useContext(CVContext);
-};
+}
 
-export const useCVDispatch = () => {
+export function useCVDispatch() {
   return useContext(CVDispatchContext);
-};
+}
 
 const reducer = (state, action) => {
   switch (action.type) {

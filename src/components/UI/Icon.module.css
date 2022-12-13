@@ -1,0 +1,18 @@
+.dark {
+  color: #3f4958;
+  transition: 0.2s ease-in-out;
+}
+
+.light {
+  color: #cccfd6;
+  transition: 0.2s ease-in-out;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover,
+.link:active {
+  color: #475467;
+}
