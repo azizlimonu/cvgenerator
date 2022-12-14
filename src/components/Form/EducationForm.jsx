@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCVDispatch } from '../../contextApi/Store'
+import Button from '../UI/Button'
 import Input from '../UI/Input'
 import InputRow from '../UI/InputRow'
 import InputWrapper from '../UI/InputWrapper'
@@ -89,12 +90,11 @@ const EducationForm = ({ education }) => {
         />
       </InputRow>
 
-      <button
+      <Button
         className="danger"
         onClick={handleDelete}
-      >
-        Delete
-      </button>
+        text='Delete'
+      />
     </InputWrapper>
   )
 }

@@ -1,18 +1,19 @@
-import { useState } from 'react';
-import ExperienceForm from './ExperienceForm';
+import React, { useState } from 'react'
 import { BsFillPlusSquareFill } from 'react-icons/bs';
-import HeaderSection from './HeaderSection';
-import Wrapper from '../UI/Wrapper';
 import { useCV, useCVDispatch } from '../../contextApi/Store';
+import InputWrapper from '../UI/InputWrapper';
+import Wrapper from '../UI/Wrapper';
+import HeaderSection from './HeaderSection';
+import Skill from './Skill';
 
-const Experience = () => {
+const Skills = () => {
   const [isShown, setIsShown] = useState(false);
-  const { experience } = useCV();
+  const { skills } = useCV();
   const dispatch = useCVDispatch();
 
-  const handleAddExperience = () => {
+  const handleAddNewSkill = () => {
     dispatch({
-      type: 'ADD_EXPERIENCE',
+      type: 'ADD_SKILL',
     });
   };
 
@@ -23,23 +24,25 @@ const Experience = () => {
   return (
     <>
       <HeaderSection
-        text="Experience"
+        text='Skills'
         onToggleSection={handleToggle}
         isShown={isShown}
       />
       {isShown && (
         <Wrapper>
           <BsFillPlusSquareFill
-            onClick={handleAddExperience}
+            onClick={handleAddNewSkill}
             className='bg-[#afb6c0] transition-all duration-200 ease-in-out'
           />
-          {experience?.map((exp) => (
-            <ExperienceForm experience={exp} key={exp.id} />
-          ))}
+          <InputWrapper>
+            {skills?.map((skil) => (
+              <Skill skill={skil} key={skil.id} />
+            ))}
+          </InputWrapper>
         </Wrapper>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Skills

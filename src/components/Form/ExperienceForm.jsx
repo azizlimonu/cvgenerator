@@ -1,8 +1,9 @@
-import { useCVDispatch } from '../../contexts/CVContext';
 import InputRow from '../UI/InputRow';
 import Input from '../UI/Input';
 import TextArea from '../UI/TextArea';
 import InputWrapper from '../UI/InputWrapper';
+import { useCVDispatch } from '../../contextApi/Store';
+import Button from '../UI/Button';
 
 const ExperienceForm = ({ experience }) => {
   const dispatch = useCVDispatch();
@@ -83,12 +84,11 @@ const ExperienceForm = ({ experience }) => {
           label="To"
         />
       </InputRow>
-      <button
-        className="color"
+      <Button
+        className='danger'
         onClick={handleDeleteExperience}
-      >
-        Delete
-      </button>
+        text='Delete'
+      />
     </InputWrapper>
   );
 };

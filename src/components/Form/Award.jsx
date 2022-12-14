@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillFileMinusFill } from 'react-icons/bs'
+import { BsFillTrashFill } from 'react-icons/bs'
 import Input from '../UI/Input'
 import InputRow from '../UI/InputRow'
 
@@ -47,10 +47,8 @@ const Award = ({ award }) => {
 
       <button
         onClick={handleDelete}
-        className="bg-red-500"
-        
       >
-        <BsFillFileMinusFill className='bg-red-500'/>
+        <BsFillTrashFill />
       </button>
     </InputRow>
   )
