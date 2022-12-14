@@ -85,7 +85,7 @@ const ExperienceForm = ({ experience }) => {
         />
       </InputRow>
       <Button
-        className='danger'
+        classes='danger'
         onClick={handleDeleteExperience}
         text='Delete'
       />

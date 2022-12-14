@@ -91,7 +91,7 @@ const EducationForm = ({ education }) => {
       </InputRow>
 
       <Button
-        className="danger"
+        classes="danger"
         onClick={handleDelete}
         text='Delete'
       />
